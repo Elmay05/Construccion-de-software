@@ -1,0 +1,72 @@
+@impotr 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
+header {
+  background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20210115/pngtree-blue-gradient-web-ui-background-image_518658.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 1.2;
+  padding: 10vw 2em;
+  text-align: center;
+  width: 100%;
+}
+footer {
+  background-image: url("https://media.istockphoto.com/id/1419766496/es/foto/conceptos-abstractos-de-tecnolog%C3%ADa-de-ciberseguridad-y-protecci%C3%B3n-de-datos-digitales-proteja.jpg?s=612x612&w=0&k=20&c=5vCzRZ4xY7X_GcnuznSIbY4Nvt0hbou0mOiELVdk9Sc=");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 1.2;
+  padding: 1vw 2em;
+  text-align: center;
+  width: 100%;
+  background-size: 100% 100%; /* Ajusta los porcentajes según tus necesidades */
+}
+table {
+  margin: 0 auto;
+  color: #46e5f4;
+  max-width: 50em; /*tamaño en relacion con la M mayuscula*/
+}
+.container {
+  margin: 0 auto;
+  max-width: 50em; /*tamaño en relacion con la M mayuscula*/
+}
+footer {
+  background-color: chartreuse;
+}
+body {
+  font-family: "Helvetica", "Arial", sans-serif; /*va agarrando los tipos de letras de izq a derecha*/
+  line-height: 1.5;
+  color: #555;
+  background-color: #c2eeff;
+}
+a {
+  color: #e81c4f;
+}
+a:hover {
+  color: black;
+}
+
+.advertencia {
+  background-image: url("https://img.freepik.com/vector-premium/fondo-seguridad-alerta_97886-3460.jpg");
+  background-size: 10% 80%; /* Ajusta los porcentajes según tus necesidades */
+  background-position: center;
+  text-align: center;
+  margin: 0 auto;
+}
+strong {
+  font-size: large;
+  color: rgb(84, 2, 2);
+}
+h1 {
+  color: darkblue;
+}
+h3 {
+  color: blue;
+}
+h5 {
+  color: dodgerblue;
+}
+.biblio {
+  background-color: #cecece;
+  border-radius: 0.5em;
+}

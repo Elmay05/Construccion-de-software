@@ -55,10 +55,3 @@ imprime_status();
 
 //funciones modernas
 () => {};
-
-function imprime_info() {
-  let saludo = "Hola ";
-  let resp = " ¿sabians que Angel David Candelario Rolon es gay?";
-  console.log(saludo + nombre + resp);
-}
-imprime_info();

@@ -6,181 +6,194 @@
     <!--Sale en la pestaña-->
     <meta charset="UTF-8" />
     <!--Para poder usar caracteres especiales-->
+  <link rel="stylesheet" href="estilos.css">
   </head>
   <body>
-    <header style="background-color: aqua">
+    <header >
       <!--Eiqueta para el encabezado de tu pagina-->
       <h1>A01712114 - Omar Emilio Casillas Alday</h1>
     </header>
-    <strong>Esta pagina se hace sin fines de lucro</strong
-    ><!--Etiqueta para resaltar fragmenttos de texto importantes-->
-    <h1>Lugar de origen</h1>
-    <p>
-      Soy de Dolores Hidalgo, pueblito muy bonito en el que podrás encontrar
-      helados de muchos sabores como mole, beso de angel, petalos de rosa,
-      elote, rosa, entre otros
-    </p>
-    <h1>Hobbies</h1>
-    <ol>
-      <!--Etiquea para crear listas-->
-      <li>Cantar</li>
-      <!--Elementos de la lista-->
-      <li>Bailar</li>
-      <li>Tocar guitarra</li>
-      <li>Viajar</li>
-      <li>Programar</li>
-    </ol>
-    <h1>Preguntas</h1>
-    <h3>¿Cuál es la diferencia entre Internet y la World Wide Web?</h3>
-    <p>
-      El internet es una gran cantidad de computadoras conectadas entre ellas en
-      todo el mundo, mientras que la World Wide Web es una red mundial de
-      documenos HTML conectados por medio de hipervinculos
-    </p>
-    <h3>¿Cuáles son las partes de un URL?</h3>
-    <p>
-      Protodolo: http o https (mas seguro el https)<br />Subdominio.Dominio.Dominio-de-nivel-superior/subcarpeta/slag<br />Puerto
-      (si no se tiene, este se asume)
-    </p>
-    <ol>
-      <li>.com</li>
-      <li>.net</li>
-      <li>.org</li>
-      <li>.mx</li>
-    </ol>
-    <h3>
-      ¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH,
-      DELETE?
-    </h3>
-    <ol>
-      <li>GET: Sirve para recuperar datos del servidor en solo lectura</li>
-      <li>HEAD: Sirve para regresar solo el encavezado de un servidor</li>
-      <li>
-        POST:Envia datos al servidor creando nuevos recursos, crea nueva id
-        manda los datos encriptados, se utilizan en formularios con informacion
-        sensible
-      </li>
-      <li>PUT:Actualiza recursos ya existentes en un servidor</li>
-      <li>
-        PATCH:Actualiza los datos de un servidor, a diferencia del "PUT", este
-        solo ocupa los cambios especificos del recurso
-      </li>
-      <li>DELETE: Se utiliza para eliminar un recurso</li>
-    </ol>
-    <h3>
-      ¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por
-      ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?
-    </h3>
-    <p>
-      POST, Este es mas seguro que utilizar un metodo GET ya que los datso no se
-      muestran en la URL
-    </p>
-    <h3>
-      ¿Qué método HTTP se utiliza cuando a través de un navegador web se accede
-      a una página a través de un URL?
-    </h3>
-    <p>El metodo GET</p>
-    <h3>
-      Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa
-      esto? ¿Ocurrió algún error?
-    </h3>
-    <p>El servidor ha devuelto el resulado esperado</p>
-    <h3>
-      ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario
-      reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por
-      qué?
-    </h3>
-    <p>
-      En caso de que se haya cambiado la direccion del archivo, debe hacer que
-      se pueda redireccionar a la pagina solicitada ya que tambien puede ser un
-      dato que no exise.
-    </p>
-    <h3>
-      ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario
-      reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por
-      qué?
-    </h3>
-    <p>Si, ya que este error indica que se cayó el sistema</p>
-    <h3>
-      ¿Qué significa que un atributo HTML5 esté depreciado o desaprobado
-      (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén
-      desaprobados.
-    </h3>
-    <p>
-      Son etiquetas que se recomiendan ya no usar ya que, aunque se les de
-      mantenimiento, en algo de tiempo puede que ya no, fallando en la
-      visualizacion de la pagina<br />
-      Algunos de las etiquedas de HTML4 que en el HTML5 están desaprobadas:
-    </p>
-    <ol>
-      <li>applet</li>
-      <li>acronym</li>
-      <li>dir</li>
-      <li>basefont</li>
-    </ol>
-    <h3>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</h3>
-    <p>
-      HML5 mejora muchos aspectos que eran dificiles u obsoletos de HTML4, en
-      HTML5 se pueden hacer als cosas de manera nativa mientras que en HTML4
-      depende de sistemas que llevan tiempo en desuso
-    </p>
-    <h3>¿Qué componentes de estructura y estilo tiene una tabla?</h3>
-    <h5>Componentes:</h5>
-    <p>
-      table, tr (filas),td(columnas), th (encabezados), tb(cuerpo de la tabla)
-    </p>
-    <h5>Estilos:</h5>
-    <p>border, padding, marging, background-color</p>
-    <h3>¿Cuáles son los principales controles de una forma HTML5?</h3>
-    <ol>
-      <li>&lt;form&gt;</form></li>
-      <li>&lt;input&gt;</form></li>
-      <li>&lt;textarea&gt;</form></li>
-      <li>&lt;label&gt;</form></li>
-      <li>&lt;fieldset&gt;</form></li>
+   
+    <!--Etiqueta para resaltar fragmenttos de texto importantes-->
+    <div class="container">
+      
+      <div class="advertencia">
+        <strong>Esta pagina se hace sin fines de lucro</strong>
+      </div>
+      
+      <h1>Lugar de origen</h1>
+      <p>
+        Soy de Dolores Hidalgo, pueblito muy bonito en el que podrás encontrar
+        helados de muchos sabores como mole, beso de angel, petalos de rosa,
+        elote, rosa, entre otros
+      </p>
+      <h1>Hobbies</h1>
+      <ol>
+        <!--Etiquea para crear listas-->
+        <li>Cantar</li>
+        <!--Elementos de la lista-->
+        <li>Bailar</li>
+        <li>Tocar guitarra</li>
+        <li>Viajar</li>
+        <li>Programar</li>
+      </ol>
+      <h1>Preguntas</h1>
+      <h3>¿Cuál es la diferencia entre Internet y la World Wide Web?</h3>
+      <p>
+        El internet es una gran cantidad de computadoras conectadas entre ellas en
+        todo el mundo, mientras que la World Wide Web es una red mundial de
+        documenos HTML conectados por medio de hipervinculos
+      </p>
+      <h3>¿Cuáles son las partes de un URL?</h3>
+      <p>
+        Protodolo: http o https (mas seguro el https)<br />Subdominio.Dominio.Dominio-de-nivel-superior/subcarpeta/slag<br />Puerto
+        (si no se tiene, este se asume)
+      </p>
+      <ol>
+        <li>.com</li>
+        <li>.net</li>
+        <li>.org</li>
+        <li>.mx</li>
+      </ol>
+      <h3>
+        ¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH,
+        DELETE?
+      </h3>
+      <ol>
+        <li>GET: Sirve para recuperar datos del servidor en solo lectura</li>
+        <li>HEAD: Sirve para regresar solo el encavezado de un servidor</li>
+        <li>
+          POST:Envia datos al servidor creando nuevos recursos, crea nueva id
+          manda los datos encriptados, se utilizan en formularios con informacion
+          sensible
+        </li>
+        <li>PUT:Actualiza recursos ya existentes en un servidor</li>
+        <li>
+          PATCH:Actualiza los datos de un servidor, a diferencia del "PUT", este
+          solo ocupa los cambios especificos del recurso
+        </li>
+        <li>DELETE: Se utiliza para eliminar un recurso</li>
+      </ol>
+      <h3>
+        ¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por
+        ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?
+      </h3>
+      <p>
+        POST, Este es mas seguro que utilizar un metodo GET ya que los datso no se
+        muestran en la URL
+      </p>
+      <h3>
+        ¿Qué método HTTP se utiliza cuando a través de un navegador web se accede
+        a una página a través de un URL?
+      </h3>
+      <p>El metodo GET</p>
+      <h3>
+        Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa
+        esto? ¿Ocurrió algún error?
+      </h3>
+      <p>El servidor ha devuelto el resulado esperado</p>
+      <h3>
+        ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario
+        reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por
+        qué?
+      </h3>
+      <p>
+        En caso de que se haya cambiado la direccion del archivo, debe hacer que
+        se pueda redireccionar a la pagina solicitada ya que tambien puede ser un
+        dato que no exise.
+      </p>
+      <h3>
+        ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario
+        reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por
+        qué?
+      </h3>
+      <p>Si, ya que este error indica que se cayó el sistema</p>
+      <h3>
+        ¿Qué significa que un atributo HTML5 esté depreciado o desaprobado
+        (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén
+        desaprobados.
+      </h3>
+      <p>
+        Son etiquetas que se recomiendan ya no usar ya que, aunque se les de
+        mantenimiento, en algo de tiempo puede que ya no, fallando en la
+        visualizacion de la pagina<br />
+        Algunos de las etiquedas de HTML4 que en el HTML5 están desaprobadas:
+      </p>
+      <ol>
+        <li>applet</li>
+        <li>acronym</li>
+        <li>dir</li>
+        <li>basefont</li>
+      </ol>
+      <h3>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</h3>
+      <p>
+        HML5 mejora muchos aspectos que eran dificiles u obsoletos de HTML4, en
+        HTML5 se pueden hacer als cosas de manera nativa mientras que en HTML4
+        depende de sistemas que llevan tiempo en desuso
+      </p>
+      <h3>¿Qué componentes de estructura y estilo tiene una tabla?</h3>
+      <h5>Componentes:</h5>
+      <p>
+        table, tr (filas),td(columnas), th (encabezados), tb(cuerpo de la tabla)
+      </p>
+      <h5>Estilos:</h5>
+      <p>border, padding, marging, background-color</p>
+      <h3>¿Cuáles son los principales controles de una forma HTML5?</h3>
+      <ol>
+        <li>&lt;form&gt;</form></li>
+        <li>&lt;input&gt;</form></li>
+        <li>&lt;textarea&gt;</form></li>
+        <li>&lt;label&gt;</form></li>
+        <li>&lt;fieldset&gt;</form></li>
+  
+      </ol>
+      <h3>
+        ¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar
+        la siguiente página para descubrirlo: http://html5test.com/ (Al responder
+        la pregunta recuerda poner el navegador que utilizas)
+      </h3>
+      <p>La pagina qeu muestra en la pregunta no carga, pero segun https://caniuse.com/, la mayoria de las etiquetas tiene sopore para mi navegador (chrome)</p>
+  
+      <h2>Sobre el ciclo de vida y desarrollo de los sistemas de información:</h2>
+      <h3>¿Cuál es el ciclo de vida de los sistemas de información?</h3>
+      <img src="https://www.tecnologias-informacion.com/ciclo.jpg" width="500px">
+      <h3>¿Cuál es el ciclo de desarrollo de sistemas de información?</h3>
+      <img src="https://viewnext.com//wp-content/uploads/2018/06/7fases_SDLC_infografia.jpg" width="500px">
+      <br />
+  
+      <div class="biblio">
+        <h1>Bibliografia</h1>
+        <ol>
+          <li>
+            ¿Sabías que ”Internet” y “Web” no son lo mismo? (s. f.). EDteam - En
+            Español Nadie Te Explica Mejor.
+            <a href="https://ed.team/blog/sabias-que-internet-y-web-no-son-lo-mismo">https://ed.team/blog/sabias-que-internet-y-web-no-son-lo-mismo</a>
+          </li>
+          <li>
+            Readers, C. H. A. C. B. |. T. R. B. (2021, 10 diciembre). What are GET,
+            POST, PUT, PATCH, DELETE? A walkthrough with JavaScript’s Fetch API.
+            Medium.
+            <a href="https://medium.com/@9cv9official/what-are-get-post-put-patch-delete-a-walkthrough-with-javascripts-fetch-api-17be31755d28">https://medium.com/@9cv9official/what-are-get-post-put-patch-delete-a-walkthrough-with-javascripts-fetch-api-17be31755d28</a>
+        
+          </li>
+          <li>  
+            Canle Fernández, E. (2022, 2 marzo). ¿Cuáles son las etiquetas obsoletas
+            en HTML5? ¡Actualízate! Tokio School. Recuperado 11 de febrero de 2025,
+            de <a href="https://www.tokioschool.com/noticias/etiquetas-obsoletas-html5/">https://www.tokioschool.com/noticias/etiquetas-obsoletas-html5/</a> 
+          </li>
+          <li>
+            Barron, B. (2021, 8 abril). HTML vs HTML5: Conoce las diferencias
+            cruciales entre ellos. Kinsta®.
+            <a href="https://kinsta.com/es/blog/html-vs-html5/#:~:text=Como%20ya%20se%20ha%20dicho,Java%20Web%20Start%20y%20Flash.">https://kinsta.com/es/blog/html-vs-html5/#:~:text=Como%20ya%20se%20ha%20dicho,Java%20Web%20Start%20y%20Flash.</a>
+          </li>
+        </ol>
+      </div>
+      
+      
 
-    </ol>
-    <h3>
-      ¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar
-      la siguiente página para descubrirlo: http://html5test.com/ (Al responder
-      la pregunta recuerda poner el navegador que utilizas)
-    </h3>
-    <p>La pagina qeu muestra en la pregunta no carga, pero segun https://caniuse.com/, la mayoria de las etiquetas tiene sopore para mi navegador (chrome)</p>
 
-    <h2>Sobre el ciclo de vida y desarrollo de los sistemas de información:</h2>
-    <h3>¿Cuál es el ciclo de vida de los sistemas de información?</h3>
-    <img src="https://www.tecnologias-informacion.com/ciclo.jpg" width="500px">
-    <h3>¿Cuál es el ciclo de desarrollo de sistemas de información?</h3>
-    <img src="https://viewnext.com//wp-content/uploads/2018/06/7fases_SDLC_infografia.jpg" width="500px">
-    <br />
-
-
-
-    <h1>Bibliografia</h1>
-    <ol>
-      <li>
-        ¿Sabías que ”Internet” y “Web” no son lo mismo? (s. f.). EDteam - En
-        Español Nadie Te Explica Mejor.
-        https://ed.team/blog/sabias-que-internet-y-web-no-son-lo-mismo
-      </li>
-      <li>
-        Readers, C. H. A. C. B. |. T. R. B. (2021, 10 diciembre). What are GET,
-        POST, PUT, PATCH, DELETE? A walkthrough with JavaScript’s Fetch API.
-        Medium.
-        https://medium.com/@9cv9official/what-are-get-post-put-patch-delete-a-walkthrough-with-javascripts-fetch-api-17be31755d28
-      </li>
-      <li>
-        Canle Fernández, E. (2022, 2 marzo). ¿Cuáles son las etiquetas obsoletas
-        en HTML5? ¡Actualízate! Tokio School. Recuperado 11 de febrero de 2025,
-        de https://www.tokioschool.com/noticias/etiquetas-obsoletas-html5/
-      </li>
-      <li>
-        Barron, B. (2021, 8 abril). HTML vs HTML5: Conoce las diferencias
-        cruciales entre ellos. Kinsta®.
-        https://kinsta.com/es/blog/html-vs-html5/#:~:text=Como%20ya%20se%20ha%20dicho,Java%20Web%20Start%20y%20Flash.
-      </li>
-    </ol>
-    <footer style="background-color: chartreuse">
+    </div>
+    <footer >
       <!--Etiqueta para crear pie de página-->
       <table>
         <!--Crear tabla-->
@@ -213,5 +226,6 @@
         </tbody>
       </table>
     </footer>
+    
   </body>
 </html>
