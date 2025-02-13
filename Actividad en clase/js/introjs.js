@@ -23,3 +23,14 @@ console.log(otro_wookie);
 
 let precio = 99.99; //se usan constantes ya que (en compras, la gente podría cambiarlos)(compran carro de $200,000,000 en $1)
 const precio_correcto = 99.99;
+
+//Alcance de las variables
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
+console.log(i); //como la variable se declaró en el for con let, despues del for, i muere
+
+for (var i = 0; i < 10; i++) {
+  console.log(i);
+}
+console.log(i);
