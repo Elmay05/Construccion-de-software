@@ -57,7 +57,8 @@ strong {
   font-size: large;
   color: rgb(84, 2, 2);
 }
-h1 {
+h1,
+h2 {
   color: darkblue;
 }
 h3 {
