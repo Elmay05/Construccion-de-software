@@ -34,3 +34,10 @@ for (var i = 0; i < 10; i++) {
   console.log(i);
 }
 console.log(i);
+//la variable se declaro con var, al final sigue existiendo y se puede cambiar, por seguridad se usa let, ayuda a la memoria igual
+
+//alert, prompt, confirm
+alert("Salta al pagina");
+prompt("¿Cómo te llamas?");
+const nombre = prompt("¿Cómo te llamas?");
+console.log(nombre);
