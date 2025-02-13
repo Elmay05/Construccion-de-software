@@ -38,6 +38,27 @@ console.log(i);
 
 //alert, prompt, confirm
 alert("Salta al pagina");
-prompt("¿Cómo te llamas?");
+//prompt("¿Cómo te llamas?");
 const nombre = prompt("¿Cómo te llamas?");
+//este guarda en nombre en una variable
 console.log(nombre);
+const is_hambre = true;
+//funciones tradicionales
+function imprime_status() {
+  let respuesta = "";
+  if (is_hambre) {
+    respuesta = " Tiene hambre";
+  }
+  console.log(nombre + respuesta);
+}
+imprime_status();
+
+//funciones modernas
+() => {};
+
+function imprime_info() {
+  let saludo = "Hola ";
+  let resp = " ¿sabians que Angel David Candelario Rolon es gay?";
+  console.log(saludo + nombre + resp);
+}
+imprime_info();
