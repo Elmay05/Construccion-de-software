@@ -63,3 +63,45 @@ const mi_funcion = () => {
   console.log("sk.djnverne.wjkn desde una funcion anonima");
 };
 mi_funcion();
+
+//Arreglos
+const arreglo = ["Elemento"];
+
+const arreglo2 = new Array();
+
+//para agregar mas elementos
+arreglo.push("Otro elemento");
+//aumenta a tamaño 11 el arreglo y agrega en la posicion 10
+arreglo[10] = "Uno más";
+
+//arreglos asociativos;
+arreglo["uno"] = 5;
+//se hace propiedad mas que un elemento del arreglo
+
+//recorrido tradicional del arreglo
+for (let i = 0; i < arreglo.length; i++) {
+  console.log(arreglo[i]);
+}
+console.log("Operador in");
+//recorrido alternativo del arreglo
+//in imprime la posicion
+for (let posicion in arreglo) {
+  console.log(posicion);
+}
+
+//of recorre los valores del arreglo
+for (let posicion of arreglo) {
+  console.log(posicion);
+}
+//pop para eliminar el ultimo elemento del arreglo
+
+//objeto: conjunto de llaves asociado con valores, son muy dinamicos
+const objeto = {};
+//para objetos no se puede utilizar el of
+objeto.atributo1 = "hola";
+objeto.atributo2 = [];
+objeto.atributo3 = {};
+
+for (let posicion in objeto) {
+  console.log(posicion);
+}
