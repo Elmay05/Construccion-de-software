@@ -66,7 +66,7 @@ mi_funcion();
 
 //Arreglos
 const arreglo = ["Elemento"];
-
+//puedo modificar los elementos del arreglo ya que lo que se guarda es la direccion del arreglo, no se pueden hacer cosas como funciones mas adelante
 const arreglo2 = new Array();
 
 //para agregar mas elementos
@@ -105,3 +105,6 @@ objeto.atributo3 = {};
 for (let posicion in objeto) {
   console.log(posicion);
 }
+
+//codificar html (acceder al DOM)
+console.log(document);
