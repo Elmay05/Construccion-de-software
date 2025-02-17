@@ -54,4 +54,12 @@ function imprime_status() {
 imprime_status();
 
 //funciones modernas
+//Parametros de la funcion (anonima) => lo que regresa{}
 () => {};
+
+//DOM (Me permite poner comportamiento a pagina web)
+
+const mi_funcion = () => {
+  console.log("sk.djnverne.wjkn desde una funcion anonima");
+};
+mi_funcion();
