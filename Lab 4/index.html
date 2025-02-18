@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+  <title>Laboratorio 4</title>
+  <meta charset="UTF-8" />
+</head>
+<body>
+  <h1>Funcion contador</h1>
+  <div id="arreglos"></div>
+  <div id="promedio"><h2>Funcion promedio al inicion de la consola</h2></div>
+  <div id="numero"><h1>Numero al revez</h1></div>
+  <div>
+    <h1>Funcion de mi interes en consola</h1>
+    <h1>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</h1>
+    <p>
+      Java se ejecuta en la JVM permitiendo independencia del sistema operativo,
+      y JS se ejecuta en navegadores y entornos como Node.js Java tiene menos
+      errores en tiempo de ejecucion ya que es un lenguaje de tipado estatico y
+      fuerte, JS tiene tipado flexible y dinamico Java se usa en aplicaciones
+      empresariales, backend y desarrollo movil, JS es mas para desarrollo web y
+      frontend Java tiene controles estrictos de seguridad y gestion de memoria,
+      JS es mas vulnerable ya que se ejecuta en navegador Java es mas escalable
+      qeu JS
+    </p>
+    <h1>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</h1>
+    <ol>
+      <li>getFullYear(): Devuelve año con 4 dígitos</li>
+      <li>
+        getMonth(): Devuelve el numero de mes entre 0(enero) y 11(diciembre)
+      </li>
+      <li>getDate(): devuelve el dia del mes del 1 al 31</li>
+      <li>getHours(): devuelve la hora actual formato 24 hrs (de 0 a 23)</li>
+      <li>getMinutes(): devuelve los minutos actuales</li>
+    </ol>
+    <h1>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</h1>
+    <ol>
+      <li>push(): Sirve para añadir un elemento en el arreglo al final</li>
+      <li>unshift(): Sirve para añadir un elemento al inicio del arreglo</li>
+      <li>pop(): elimina el ultimo elemento del arreglo</li>
+      <li>slice(): sirve para copiar un arreglo sin afectar al original</li>
+      <li>length: para conocer el tamaño del arreglo</li>
+    </ol>
+    <h1>
+      ¿Cómo se declara una variable con alcance local dentro de una función?
+    </h1>
+    <p>
+      Estas se declaran cuando se inicia una funcion, haciendo qeu se borre al
+      finalizar la ejecucion, ejemplo function suma_numeros(a,b){ const total =
+      a+b; } una vez se termine de ejecutar la funcion, la variable total
+      desaparece, estas variables pueden ser const o let
+    </p>
+    <h1>
+      ¿Qué implicaciones tiene utilizar variables globales dentro de funciones?
+    </h1>
+    <p>
+      Esto puede implicar que la variable pueda ser modificada mas adelante
+      desde cualquier parte del codigo, las funciones se vuelven un poco
+      independientes ya que dependen de un estado externo (variable var), puede
+      haber problemas a la hora de dar mantenimiento ya que el error puede estar
+      muy lejos de donde se ve el error
+    </p>
+    <h1>Bibliografias</h1>
+    <ol>
+      <li>
+        Meza, L. (2025, 5 febrero). ¿Qué diferencias hay entre Java y
+        JavaScript? Hack a boss.
+        https://www.hackaboss.com/blog/diferencias-javascript-java
+      </li>
+      <li>
+        Métodos del objeto Date – Digital Learning. (s. f.).
+        https://www.digitallearning.es/intro-programacion-js/metodos-date.html#:~:text=M%C3%A9todos%20para%20establecer%20otros%20valores%20al%20objeto%20Date&text=o%20aplicando%20los%20m%C3%A9todos%20setFullYear,el%20valor%20que%20queramos%20modificar.
+      </li>
+      <li>
+        Zubikarai, S. (2022, 12 enero). Manual de arreglos en JavaScript:
+        Métodos de arreglos de JS explicados con ejemplos. freeCodeCamp.org.
+        https://www.freecodecamp.org/espanol/news/el-manual-de-arreglos-en-javascript/
+      </li>
+      <li>
+        Alcance de las variables globales y locales. (2022, 14 abril). web.dev.
+        https://web.dev/articles/global-and-local-scope?hl=es-419#local_scope_and_function_scope
+      </li>
+    </ol>
+  </div>
+  <script src="labjs.js"></script>
+</body>
