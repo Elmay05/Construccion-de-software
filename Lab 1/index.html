@@ -6,9 +6,12 @@
     <!--Sale en la pestaña-->
     <meta charset="UTF-8" />
     <!--Para poder usar caracteres especiales-->
-  <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
   </head>
   <body>
+   
     <header >
       <!--Eiqueta para el encabezado de tu pagina-->
       <h1>A01712114 - Omar Emilio Casillas Alday</h1>
@@ -38,147 +41,472 @@
         <li>Programar</li>
       </ol>
       <h1>Preguntas 1</h1>
-      <h3>¿Cuál es la diferencia entre Internet y la World Wide Web?</h3>
-      <p>
-        El internet es una gran cantidad de computadoras conectadas entre ellas en
-        todo el mundo, mientras que la World Wide Web es una red mundial de
-        documenos HTML conectados por medio de hipervinculos
-      </p>
-      <h3>¿Cuáles son las partes de un URL?</h3>
-      <p>
-        Protodolo: http o https (mas seguro el https)<br />Subdominio.Dominio.Dominio-de-nivel-superior/subcarpeta/slag<br />Puerto
-        (si no se tiene, este se asume)
-      </p>
-      <ol>
-        <li>.com</li>
-        <li>.net</li>
-        <li>.org</li>
-        <li>.mx</li>
-      </ol>
-      <h3>
-        ¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH,
-        DELETE?
-      </h3>
-      <ol>
-        <li>GET: Sirve para recuperar datos del servidor en solo lectura</li>
-        <li>HEAD: Sirve para regresar solo el encavezado de un servidor</li>
-        <li>
-          POST:Envia datos al servidor creando nuevos recursos, crea nueva id
-          manda los datos encriptados, se utilizan en formularios con informacion
-          sensible
-        </li>
-        <li>PUT:Actualiza recursos ya existentes en un servidor</li>
-        <li>
-          PATCH:Actualiza los datos de un servidor, a diferencia del "PUT", este
-          solo ocupa los cambios especificos del recurso
-        </li>
-        <li>DELETE: Se utiliza para eliminar un recurso</li>
-      </ol>
-      <h3>
-        ¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por
-        ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?
-      </h3>
-      <p>
-        POST, Este es mas seguro que utilizar un metodo GET ya que los datso no se
-        muestran en la URL
-      </p>
-      <h3>
-        ¿Qué método HTTP se utiliza cuando a través de un navegador web se accede
-        a una página a través de un URL?
-      </h3>
-      <p>El metodo GET</p>
-      <h3>
-        Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa
-        esto? ¿Ocurrió algún error?
-      </h3>
-      <p>El servidor ha devuelto el resulado esperado</p>
-      <h3>
-        ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario
-        reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por
-        qué?
-      </h3>
-      <p>
-        En caso de que se haya cambiado la direccion del archivo, debe hacer que
-        se pueda redireccionar a la pagina solicitada ya que tambien puede ser un
-        dato que no exise.
-      </p>
-      <h3>
-        ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario
-        reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por
-        qué?
-      </h3>
-      <p>Si, ya que este error indica que se cayó el sistema</p>
-      <h3>
-        ¿Qué significa que un atributo HTML5 esté depreciado o desaprobado
-        (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén
-        desaprobados.
-      </h3>
-      <p>
-        Son etiquetas que se recomiendan ya no usar ya que, aunque se les de
-        mantenimiento, en algo de tiempo puede que ya no, fallando en la
-        visualizacion de la pagina<br />
-        Algunos de las etiquedas de HTML4 que en el HTML5 están desaprobadas:
-      </p>
-      <ol>
-        <li>applet</li>
-        <li>acronym</li>
-        <li>dir</li>
-        <li>basefont</li>
-      </ol>
-      <h3>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</h3>
-      <p>
-        HML5 mejora muchos aspectos que eran dificiles u obsoletos de HTML4, en
-        HTML5 se pueden hacer als cosas de manera nativa mientras que en HTML4
-        depende de sistemas que llevan tiempo en desuso
-      </p>
-      <h3>¿Qué componentes de estructura y estilo tiene una tabla?</h3>
-      <h5>Componentes:</h5>
-      <p>
-        table, tr (filas),td(columnas), th (encabezados), tb(cuerpo de la tabla)
-      </p>
-      <h5>Estilos:</h5>
-      <p>border, padding, marging, background-color</p>
-      <h3>¿Cuáles son los principales controles de una forma HTML5?</h3>
-      <ol>
-        <li>&lt;form&gt;</form></li>
-        <li>&lt;input&gt;</form></li>
-        <li>&lt;textarea&gt;</form></li>
-        <li>&lt;label&gt;</form></li>
-        <li>&lt;fieldset&gt;</form></li>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              ¿Cuál es la diferencia entre Internet y la World Wide Web?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+            
+              El internet es una gran cantidad de computadoras conectadas entre ellas en
+              todo el mundo, mientras que la World Wide Web es una red mundial de
+              documenos HTML conectados por medio de hipervinculos
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              ¿Cuáles son las partes de un URL?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                    
+            
+              Protodolo: http o https (mas seguro el https)<br />Subdominio.Dominio.Dominio-de-nivel-superior/subcarpeta/slag<br />Puerto
+              (si no se tiene, este se asume)
+          
+              <ol>
+                <li>.com</li>
+                <li>.net</li>
+                <li>.org</li>
+                <li>.mx</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              
+              ¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH,
+              DELETE?
+              
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <ol>
+                <li>GET: Sirve para recuperar datos del servidor en solo lectura</li>
+                <li>HEAD: Sirve para regresar solo el encavezado de un servidor</li>
+                <li>
+                  POST:Envia datos al servidor creando nuevos recursos, crea nueva id
+                  manda los datos encriptados, se utilizan en formularios con informacion
+                  sensible
+                </li>
+                <li>PUT:Actualiza recursos ya existentes en un servidor</li>
+                <li>
+                  PATCH:Actualiza los datos de un servidor, a diferencia del "PUT", este
+                  solo ocupa los cambios especificos del recurso
+                </li>
+                <li>DELETE: Se utiliza para eliminar un recurso</li>
+              </ol>
+
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              
+              ¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por
+              ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?
+              
+            </button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              
+              POST, Este es mas seguro que utilizar un metodo GET ya que los datso no se
+              muestran en la URL
+              
+
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+             
+              ¿Qué método HTTP se utiliza cuando a través de un navegador web se accede
+              a una página a través de un URL?
+              
+            </button>
+          </h2>
+          <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              El metodo GET
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+             
+              Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa
+              esto? ¿Ocurrió algún error?
+              
+              
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              El servidor ha devuelto el resulado esperado
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+             
+              ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario
+              reporta que intentó acceder al sitio y se encontró con un error 404? ¿Porqué?
+              
+              
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              En caso de que se haya cambiado la direccion del archivo, debe hacer que
+              se pueda redireccionar a la pagina solicitada ya que tambien puede ser un dato que no exise.
+                  
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+             
+              ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario
+              reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por
+              qué?
+
+            </button>
+          </h2>
+          <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Si, ya que este error indica que se cayó el sistema
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+             
+              
+              ¿Qué significa que un atributo HTML5 esté depreciado o desaprobado
+              (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén
+              desaprobados.
+              
+
+            </button>
+          </h2>
+          <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              
+              Son etiquetas que se recomiendan ya no usar ya que, aunque se les de
+              mantenimiento, en algo de tiempo puede que ya no, fallando en la
+              visualizacion de la pagina<br />
+              Algunos de las etiquedas de HTML4 que en el HTML5 están desaprobadas:
+              
+              <ol>
+                <li>applet</li>
+                <li>acronym</li>
+                <li>dir</li>
+                <li>basefont</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+             
+              ¿Cuáles son las diferencias principales entre HTML 4 y HTML5?
+
+            </button>
+          </h2>
+          <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              
+              HML5 mejora muchos aspectos que eran dificiles u obsoletos de HTML4, en
+              HTML5 se pueden hacer als cosas de manera nativa mientras que en HTML4
+              depende de sistemas que llevan tiempo en desuso
+              
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+             
+              ¿Qué componentes de estructura y estilo tiene una tabla?
+
+            </button>
+          </h2>
+          <div id="collapseTwelve" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              
+              <strong>Componentes:</strong>
+              table, tr (filas),td(columnas), th (encabezados), tb(cuerpo de la tabla)
+              <strong>Estilos:</strong>
+              border, padding, marging, background-color
+              
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTirteen" aria-expanded="false" aria-controls="collapseTirteen">
+             
+              ¿Cuáles son los principales controles de una forma HTML5?
+
+            </button>
+          </h2>
+          <div id="collapseTirteen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <ol>
+                <li>&lt;form&gt;</form></li>
+                <li>&lt;input&gt;</form></li>
+                <li>&lt;textarea&gt;</form></li>
+                <li>&lt;label&gt;</form></li>
+                <li>&lt;fieldset&gt;</form></li>
+          
+              </ol>
+    
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+             
+              
+              ¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar
+              la siguiente página para descubrirlo: http://html5test.com/ (Al responder
+              la pregunta recuerda poner el navegador que utilizas)
+              
+
+            </button>
+          </h2>
+          <div id="collapseFourteen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>La pagina qeu muestra en la pregunta no carga, pero segun https://caniuse.com/, la mayoria de las etiquetas tiene sopore para mi navegador (chrome)</p>
   
-      </ol>
-      <h3>
-        ¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar
-        la siguiente página para descubrirlo: http://html5test.com/ (Al responder
-        la pregunta recuerda poner el navegador que utilizas)
-      </h3>
-      <p>La pagina qeu muestra en la pregunta no carga, pero segun https://caniuse.com/, la mayoria de las etiquetas tiene sopore para mi navegador (chrome)</p>
+    
+            </div>
+          </div>
+        </div>
+        <h2>Sobre el ciclo de vida y desarrollo de los sistemas de información:</h2>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+              ¿Cuál es el ciclo de vida de los sistemas de información?
+              
+
+            </button>
+          </h2>
+          <div id="collapseEleven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <img src="https://www.tecnologias-informacion.com/ciclo.jpg" width="500px">
+              
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+              ¿Cuál es el ciclo de desarrollo de sistemas de información?
+              
+
+            </button>
+          </h2>
+          <div id="collapseFifteen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <img src="https://viewnext.com//wp-content/uploads/2018/06/7fases_SDLC_infografia.jpg" width="500px">
+              
+            </div>
+          </div>
+        </div>
+      </div>
   
-      <h2>Sobre el ciclo de vida y desarrollo de los sistemas de información:</h2>
-      <h3>¿Cuál es el ciclo de vida de los sistemas de información?</h3>
-      <img src="https://www.tecnologias-informacion.com/ciclo.jpg" width="500px">
-      <h3>¿Cuál es el ciclo de desarrollo de sistemas de información?</h3>
-      <img src="https://viewnext.com//wp-content/uploads/2018/06/7fases_SDLC_infografia.jpg" width="500px">
+
+
       <br />
       <h1> Preguntas Lab 2</h1>
-      <h3>Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS? </h3>
-      <p>!important es una regla de CSS que da prioridad a algun estilo ignorando la especificidad y cascada de CSS, este tiene que ser limitado y con justificacion ya que podría causar problemas de mantenibilidad y escalabilidad, si esta se llegara a utilizar, recomiendo que sea para evitar estilos de terceros (si se usan linbrerias o frameworks) y para algunas pruebas </p>
-      <h3>Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</h3>
-      <p>
-        Esto ya que a veces las imagenes pueden tener muchas trazos, haciendo ilegible el contenido del texto, talvez tambien para el rendimiento de la pagina ya que las de alta resolucion podrían afectar un poco, si la pagina se llegase a utilizar en celular, esta tendía que ser responsiba y porque algunas pueden tener derechos de autor
-      </p>
-      <h3>Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?</h3>
-      <p>% para tamaños flexibles y se ocupa responsividad en una pagina web, px cuando se ocupa precision, ya que esta es una unidad que no cambia respecto al tamaño de la pantalla y pt tengo entendido es mejor para diseñps de impresión, pt no escala correctamente en todos los dispositivos</p>
-      <h3>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</h3>
-      <p>Como todo lenguaje de programacion, mientras menos lineas tenga, mas rapido cargará, entonces al evitar espacios o caracteres innecesarios, carga mas rapido, de igual manera se reduce el numero de peticiones al servidor mejorando el rendimiento</p>
-      
-      <div class="biblio">
-        
-        <h1>Bibliografia<button id="bib">"->"</button></h1>
-        <div><span id="biblio"></span></div>
-        
+
+      <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+             
+            </div>
+          </div>
+        </div>
       </div>
+
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Pregunta 1
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS?
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              !important es una regla de CSS que da prioridad a algun estilo ignorando la especificidad y cascada de CSS, este tiene que ser limitado y con justificacion ya que podría causar problemas de mantenibilidad y escalabilidad, si esta se llegara a utilizar, recomiendo que sea para evitar estilos de terceros (si se usan linbrerias o frameworks) y para algunas pruebas
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+        Pregunta 2
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              
+              Esto ya que a veces las imagenes pueden tener muchas trazos, haciendo ilegible el contenido del texto, talvez tambien para el rendimiento de la pagina ya que las de alta resolucion podrían afectar un poco, si la pagina se llegase a utilizar en celular, esta tendía que ser responsiba y porque algunas pueden tener derechos de autor
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+        Pregunta 3
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              % para tamaños flexibles y se ocupa responsividad en una pagina web, px cuando se ocupa precision, ya que esta es una unidad que no cambia respecto al tamaño de la pantalla y pt tengo entendido es mejor para diseñps de impresión, pt no escala correctamente en todos los dispositivos
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+        Pregunta 4
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              
+        
+              Como todo lenguaje de programacion, mientras menos lineas tenga, mas rapido cargará, entonces al evitar espacios o caracteres innecesarios, carga mas rapido, de igual manera se reduce el numero de peticiones al servidor mejorando el rendimiento     
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+
+
       
+      
+      
+      <p class="d-inline-flex gap-1">
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Bibliografia
+        </button>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          <ol>
+            <li>
+              ¿Sabías que ”Internet” y “Web” no son lo mismo? (s. f.). EDteam - En
+              Español Nadie Te Explica Mejor.
+              <a href="https://ed.team/blog/sabias-que-internet-y-web-no-son-lo-mismo">https://ed.team/blog/sabias-que-internet-y-web-no-son-lo-mismo</a>
+            </li>
+            <li>
+              Readers, C. H. A. C. B. |. T. R. B. (2021, 10 diciembre). What are GET,
+              POST, PUT, PATCH, DELETE? A walkthrough with JavaScript’s Fetch API.
+              Medium.
+              <a href="https://medium.com/@9cv9official/what-are-get-post-put-patch-delete-a-walkthrough-with-javascripts-fetch-api-17be31755d28">https://medium.com/@9cv9official/what-are-get-post-put-patch-delete-a-walkthrough-with-javascripts-fetch-api-17be31755d28</a>
+          
+            </li>
+            <li>  
+              Canle Fernández, E. (2022, 2 marzo). ¿Cuáles son las etiquetas obsoletas
+              en HTML5? ¡Actualízate! Tokio School. Recuperado 11 de febrero de 2025,
+              de <a href="https://www.tokioschool.com/noticias/etiquetas-obsoletas-html5/">https://www.tokioschool.com/noticias/etiquetas-obsoletas-html5/</a> 
+            </li>
+            <li>
+              Barron, B. (2021, 8 abril). HTML vs HTML5: Conoce las diferencias
+              cruciales entre ellos. Kinsta®.
+              <a href="https://kinsta.com/es/blog/html-vs-html5/#:~:text=Como%20ya%20se%20ha%20dicho,Java%20Web%20Start%20y%20Flash.">https://kinsta.com/es/blog/html-vs-html5/#:~:text=Como%20ya%20se%20ha%20dicho,Java%20Web%20Start%20y%20Flash.</a>
+            </li>
+            <li>
+              Cascading Style Sheets (CSS). (2023). MDN Web Docs. Mozilla Foundation. Recuperado el 13 de febrero de 2025, de 
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">https://developer.mozilla.org/en-US/docs/Web/CSS</a>
+            </li>
+            <li>
+              Sánchez, J. (2024, 22 agosto). Cómo elegir las imágenes para páginas web y tus post | Nuteco Web. nuteco - agencia de marketing digital. 
+              <a href="https://www.nutecoweb.com/elegir-las-imagenes-tus-paginas-posts/#:~:text=Escoger%20im%C3%A1genes%20adecuadas%20es%20igual%20a%20contenido%20de%20calidad&text=Tendr%C3%A1s%20un%20buen%20texto%2C%20s%C3%AD,%C3%A9xito%20en%20tu%20sitio%20web.">https://www.nutecoweb.com/elegir-las-imagenes-tus-paginas-posts/#:~:text=Escoger%20im%C3%A1genes%20adecuadas%20es%20igual%20a%20contenido%20de%20calidad&text=Tendr%C3%A1s%20un%20buen%20texto%2C%20s%C3%AD,%C3%A9xito%20en%20tu%20sitio%20web.
+             </li></a>
+            </li>
+          </ol>
+        </div>
+      </div>
       
 
 
@@ -217,5 +545,6 @@
       </table>
     </footer>
     <script src="introjs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
