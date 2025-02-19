@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Log in</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <h1>Iniciar Sesión</h1>
+      <!--Definir formulario para login-->
+      <!--Se pone ID para mandarlos al JS-->
+      <form id="formulario">
+        <div>
+          <!--Se usa para relacionarlo con el campo-->
+          <label>Correo Electronico</label>
+          <!--Se pone el type para esperar formatos de correo electronico-->
+          <!--Se pone id para poder manipularlo en el JS-->
+          <!--Se pone required para que el campo sea obligatorio-->
+          <input type="email" id="email" required />
+        </div>
+        <div>
+          <label>Contraseña</label>
+          <input type="password" id="password" required />
+        </div>
+        <button
+          type="submit"
+          id="boton"
+          onmouseover="presiona(this)"
+          onmouseout="fuera(this)"
+        >
+          Ingresa
+        </button>
+        <p id="mensajedeerror" class="hidden">Correo o contraseña incorrecta</p>
+      </form>
+    </div>
+    <div id="preguntas" class="preguntashidden">
+      <h2>
+        ¿Por qué es una buena práctica usar JavaScript para checar que sean
+        válidos los inputs de las formas antes de enviar los datos al servidor?
+      </h2>
+      <p>
+        Para garantizar que los datos que se envian coinciden con los requisitos
+        establecidos en los controels de formulario, de igual manera puedes
+        realizar correcciones guiadas como en el caso del correo electronico,
+        que siga el formato con @
+      </p>
+      <h2>
+        ¿Cómo puedes saltarte la seguridad de validaciones hechas con
+        JavaScript?
+      </h2>
+      <p>
+        Esto se puede hacer con algunas palabras reservadas de html como entrar
+        a la consola y en el formulario poner novalidate="" o el el submit poner
+        formnovalidate=""
+      </p>
+      <h2>
+        Si te puedes saltar la seguridad de las validaciones de JavaScript,
+        entonces ¿por qué la primera pregunta dice que es una buena práctica?
+      </h2>
+      <p>
+        Pues es buena practica dar una retroalimentacion al usuario en elmomento
+        sobre los errores, o dar una guia de lo que tiene que hacer siendo este
+        mas un complemento que una validacion de formulario como en este caso,
+        el usuario, para garantizar una mejor seguridad y la proteccion de los
+        datos, es bueno combinar esto con un servidor
+      </p>
+      <h2>Bibliografias</h2>
+      <ol>
+        <li>
+          Validación de formularios de datos - Aprende desarrollo web | MDN.
+          (s. f.). MDN Web Docs.
+          https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Forms/Form_validation
+        </li>
+        <li>
+          Ada Lovecode - Didacticode. (2020, 9 diciembre). 🦘Cómo EVITAR la
+          VALIDACIÓN de un formulario HTML5 💻 sin herramientas [Vídeo].
+          YouTube. https://www.youtube.com/watch?v=DXjkaEQ55FM
+        </li>
+      </ol>
+    </div>
+
+    <script src="contra.js"></script>
+  </body>
+</html>

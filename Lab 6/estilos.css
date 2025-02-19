@@ -1,0 +1,50 @@
+body {
+  font-family: "Helvetica", "Arial", sans-serif; /*va agarrando los tipos de letras de izq a derecha*/
+  line-height: 1.5;
+  color: #555;
+  background-color: #494d92;
+  /*Hace que sea flexible su conetnido (que su comportamiento se adapte al tamaño de contenido*/
+  display: flex;
+  /*Centra orizontamente el contenido*/
+  justify-content: center;
+  /*Centra verticalmente el contenido*/
+  align-items: center;
+  /*Hace qeu el body ocupe el 100% del alto de la pantalla*/
+  height: 100vh;
+  /*Elimina margenes predeterminados del body*/
+  margin: 0;
+}
+.container {
+  max-width: 256px; /*Limita ancho maximo del contenedor para que no sea tan grande */
+  width: 90%; /*Hace que container sea flexible en pantallas pequeñas*/
+  background-color: #6c72de;
+  color: #ffffff;
+  padding: 20px; /*espacio interno para que no se pegue con el texto*/
+  border-radius: 2em; /*Redondea las esquinas*/
+  text-align: center; /*Alinea contenido */
+  /*el primero (0) define cuanto se meuve la sombra a la derecha o izquierda(negativo) */
+  /*El segunto(2px) define cuanto se mueve hacia abajo (positivo) o arriba(negativo)*/
+  /*EL tercero indica que tan difuso será la sombra*/
+  box-shadow: 0 2px 8px #000000; /*Sirve para darle profundidad*/
+}
+button {
+  background-color: #8b90e8;
+  border-radius: 6px;
+}
+
+.hidden {
+  display: none;
+}
+#preguntas {
+  font-family: "Helvetica", "Arial", sans-serif; /*va agarrando los tipos de letras de izq a derecha*/
+  line-height: 1.5;
+  color: #555;
+  border-radius: 3em;
+  padding: 30%;
+  margin: 0 auto;
+  max-width: 60em; /*tamaño en relacion con la M mayuscula*/
+  color: aliceblue;
+}
+.preguntashidden {
+  display: none;
+}
