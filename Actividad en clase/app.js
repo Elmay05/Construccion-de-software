@@ -1,5 +1,8 @@
 //fs, hola.txt y Hola desde node va con '' no con ""
 const file_system = require("fs");
+//Usa libreria file_system(fs o fileSystem) guardandola en la const
+//require es como import
+
 //Tiene funciones para leer y escribir archivos
 //    WriteFileSync       Escribe de manera Sincronica
 //  WriteFile     Escribe de manera asincrona

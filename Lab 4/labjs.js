@@ -124,6 +124,7 @@ class Ganancias_anuales {
       }
       this.imprime_informacion();
       console.log(
+        //toFixed es para costrar 2 decimales
         `Despues de los años ya mencionados tendrás un total de ${total.toFixed(
           2
         )}`
