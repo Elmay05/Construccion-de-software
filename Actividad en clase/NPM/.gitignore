@@ -1,0 +1,12 @@
+#Para no versionar los nodos de modulos
+node_modules/ 
+dist/
+
+.idea/
+#Windows
+Tumbs.db
+
+#Mac
+.DS_Store
+
+#En el proyecto hay que poner las 2 lineas windows y mac
