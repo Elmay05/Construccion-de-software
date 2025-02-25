@@ -15,7 +15,13 @@ app.use((request, response, next) => {
 //Express funciona por middlewares :algo qeu está en medio
 //Con registrar un midleware, ya se registra en toda la app y no tengo que reescribir todo
 //Para agregar middleware se usa ".use"
-//next es funcion de expres que avanza al siguiente middleware
+//next es funcion de expres que avanza al siguiente middlewar
+
+//Este middleware se registra sólo en la ruta /chewy
+app.use("/chewy", (request, response, next) => {
+  response.send("Hola desde una ruta /chewy");
+});
+
 app.use((request, response, next) => {
   console.log("Otro middleware!");
   //Manda la respuesta al cliente
@@ -24,4 +30,5 @@ app.use((request, response, next) => {
 
 //ES UN COMPOSIT
 
+//Hay que ir de lo especifico a lo general
 app.listen(3000);
