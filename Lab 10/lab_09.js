@@ -5,43 +5,44 @@ const html_header = `
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Log in</title>
-    <link rel="stylesheet" href="estilos.css" />
+
     <style>
-        body {
-            font-family: "Helvetica", "Arial", sans-serif; /*va agarrando los tipos de letras de izq a derecha*/
-            line-height: 1.5;
-            color: #555;
-            background-color: #494d92;
-            /*Hace que sea flexible su conetnido (que su comportamiento se adapte al tamaño de contenido*/
-            display: flex;
-            /*Centra orizontamente el contenido*/
-            justify-content: center;
-            /*Centra verticalmente el contenido*/
-            align-items: center;
-            /*Hace qeu el body ocupe el 100% del alto de la pantalla*/
-            height: 100vh;
-            /*Elimina margenes predeterminados del body*/
-            margin: 0;
-        }
-        .container {
-            max-width: 256px; /*Limita ancho maximo del contenedor para que no sea tan grande */
-            width: 90%; /*Hace que container sea flexible en pantallas pequeñas*/
-            background-color: #6c72de;
-            color: #ffffff;
-            padding: 20px; /*espacio interno para que no se pegue con el texto*/
-            border-radius: 2em; /*Redondea las esquinas*/
-            text-align: center; /*Alinea contenido */
-            /*el primero (0) define cuanto se meuve la sombra a la derecha o izquierda(negativo) */
-            /*El segunto(2px) define cuanto se mueve hacia abajo (positivo) o arriba(negativo)*/
-            /*EL tercero indica que tan difuso será la sombra*/
-            box-shadow: 0 2px 8px #000000; /*Sirve para darle profundidad*/
-        }
-        button {
-            background-color: #8b90e8;
-            border-radius: 6px;
-        }
-        .hidden {
-            display: none;
+      body {
+          font-family: "Helvetica", "Arial", sans-serif; /*va agarrando los tipos de letras de izq a derecha*/
+          line-height: 1.5;
+          color: #555;
+          background-color: #494d92;
+          /*Hace que sea flexible su conetnido (que su comportamiento se adapte al tamaño de contenido*/
+          display: flex;
+          /*Centra orizontamente el contenido*/
+          justify-content: center;
+          /*Centra verticalmente el contenido*/
+          align-items: center;
+          /*Hace qeu el body ocupe el 100% del alto de la pantalla*/
+          height: 100vh;
+          /*Elimina margenes predeterminados del body*/
+          margin: 0;
+      }
+      .container {
+        max-width: 256px; /*Limita ancho maximo del contenedor para que no sea tan grande */
+        width: 90%; /*Hace que container sea flexible en pantallas pequeñas*/
+        background-color: #6c72de;
+        color: #ffffff;
+        padding: 20px; /*espacio interno para que no se pegue con el texto*/
+        border-radius: 2em; /*Redondea las esquinas*/
+        text-align: center; /*Alinea contenido */
+        /*el primero (0) define cuanto se meuve la sombra a la derecha o izquierda(negativo) */
+        /*El segunto(2px) define cuanto se mueve hacia abajo (positivo) o arriba(negativo)*/
+        /*EL tercero indica que tan difuso será la sombra*/
+        box-shadow: 0 2px 8px #000000; /*Sirve para darle profundidad*/
+      }
+      button {
+        background-color: #8b90e8;
+        border-radius: 6px;
+      }
+      .hidden {
+        display: none;
+      }
     </style>
   </head>`;
 
@@ -76,8 +77,87 @@ const html_login = `
         <p id="mensajedeerror" class="hidden">Correo o contraseña incorrecta</p>
       </form>
     </div>
-    <script src="login.js"></script>
+    
   </body>
+  <script>
+      let correos = ["ejemplo@gmail.com", "ejemplo1@gmail.com", "ejemplo2@gmail.com"];
+      let contraseñas = [1234, 5678, 9123];
+      const email = document.getElementById("email");
+      const contraseña = document.getElementById("password");
+      const conte = document.getElementById("container");
+      function comprueba(event) {
+        //evita que la pagina carge al enviar formulario
+        event.preventDefault();
+        //value sirve para obtener campo de entrada (en este caso el correo)
+        const emailValue = email.value;
+        const contraseñaValue = contraseña.value;
+
+        for (let i = 0; i < correos.length; i++) {
+          if (correos[i] == emailValue && contraseñas[i] == contraseñaValue) {
+            alert("Inicio de sesión exitoso");
+            window.location.replace("/productos"); //redirije a la pagina de productos
+            return;
+          }
+        }
+        document.getElementById("mensajedeerror").classList.remove("hidden");
+      }
+      //Captura formulario y agrega el evento de envio
+      const form = document.getElementById("formulario");
+      form.addEventListener("submit", comprueba);
+
+      function fuera(x) {
+        x.style.boxShadow = "2px 3px 5px #000000";
+        x.style.color = "#3d3f60";
+      }
+
+      function presiona(x) {
+        x.style.boxShadow = "0px 0px 1px #000000";
+        x.style.color = "#000000";
+      }
+
+      function mensajecontra() {
+        let mensaje = document.createElement("p");
+        mensaje.id = "ayudaPassword";
+        mensaje.textContent = "Contraseña caso de prueva: 1234";
+        mensaje.style.color = "white";
+        mensaje.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+        mensaje.style.padding = "5px";
+        mensaje.style.borderRadius = "5px";
+        mensaje.style.position = "absolute";
+        mensaje.style.marginTop = "5px";
+        this.parentNode.appendChild(mensaje);
+      }
+
+      function mensajeemail() {
+        let mensaje = document.createElement("p");
+        mensaje.id = "ayudaEmail";
+        mensaje.textContent = "Email caso de prueva: ejemplo@gmail.com";
+        mensaje.style.color = "white";
+        mensaje.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+        mensaje.style.padding = "5px";
+        mensaje.style.borderRadius = "5px";
+        mensaje.style.position = "absolute";
+        mensaje.style.marginTop = "5px";
+        this.parentNode.appendChild(mensaje);
+      }
+
+      // CAMBIO DE ESTILO Y MENSAJES DINÁMICOS
+
+      // 🔹 Mostrar un mensaje de ayuda cuando el usuario coloca el mouse sobre el campo de contraseña
+      contraseña.addEventListener("mouseover", mensajecontra);
+      email.addEventListener("mouseover", mensajeemail);
+      // ❌ Ocultar mensaje cuando el usuario quita el mouse
+      contraseña.addEventListener("mouseout", function () {
+        let mensaje = document.getElementById("ayudaPassword");
+        if (mensaje) mensaje.remove();
+      });
+
+      email.addEventListener("mouseout", function () {
+        let mensaje = document.getElementById("ayudaEmail");
+        if (mensaje) mensaje.remove();
+      });
+
+    </script>
 </html>
 `;
 
@@ -96,6 +176,7 @@ const html_footer = `</div>
         </p>
         </div>
     </footer>
+    
   </body>
 </html>
 `;
@@ -219,19 +300,59 @@ function hideHelp(id) {
 
 //------------------------------------Iniciando servidor-----------------------------------
 const http = require("http");
+const querystring = require("querystring");
 
 const server = http.createServer((request, response) => {
   if (request.url == "/" && request.method == "GET") {
+    // Se maneja la solicitud GET para la página de login
     console.log(request.url);
     response.setHeader("Content-Type", "text/html");
     response.write(html_header + html_login);
     response.end();
-  } else if (request.method == "POST") {
-    console.log(request.url);
+  } else if (request.url == "/" && request.method == "POST") {
+    // Procesamos los datos de login en la ruta raíz
+    let body = "";
+    request.on("data", (chunk) => {
+      body += chunk;
+    });
+
+    request.on("end", () => {
+      // Usamos querystring para parsear los datos POST
+      const parsedBody = querystring.parse(body);
+      const emailValue = parsedBody.email;
+      const contraseñaValue = parsedBody.password;
+
+      let correos = [
+        "ejemplo@gmail.com",
+        "ejemplo1@gmail.com",
+        "ejemplo2@gmail.com",
+      ];
+      let contraseñas = [1234, 5678, 9123];
+
+      for (let i = 0; i < correos.length; i++) {
+        if (correos[i] == emailValue && contraseñas[i] == contraseñaValue) {
+          alert("Inicio de sesión exitoso");
+          // Redirigir a la página de productos
+          response.writeHead(302, { Location: "/productos" });
+          response.end();
+          return;
+        }
+      }
+
+      // Si la validación falla, muestra mensaje de error
+      response.setHeader("Content-Type", "text/html");
+      response.write(
+        html_header + "Correo o contraseña incorrecta" + html_footer
+      );
+      response.end();
+    });
+  } else if (request.url == "/productos" && request.method == "GET") {
+    // Página de productos (se accede solo si el login fue exitoso)
     response.setHeader("Content-Type", "text/html");
     response.write(productos);
     response.end();
   } else {
+    // Si no se encuentra la página
     response.statusCode = 404;
     response.setHeader("Content-Type", "text/html");
     response.write(html_header + "La página no existe" + html_footer);
@@ -240,4 +361,4 @@ const server = http.createServer((request, response) => {
 });
 
 server.listen(4003);
-console.log("server on port 4003");
+console.log("Server running on port 4003");
