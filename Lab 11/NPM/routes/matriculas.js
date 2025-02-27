@@ -1,3 +1,8 @@
+const express = require("express");
+
+const router = express.Router();
+
+const omar = `
 <!DOCTYPE html>
 <!--Esta etiqueta sirve para definir que usaremos HTML5-->
 <html>
@@ -8,7 +13,83 @@
     <!--Para poder usar caracteres especiales-->
     <link rel="stylesheet" href="estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  
+    <style>
+      @impotr 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
+      header {
+        background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20210115/pngtree-blue-gradient-web-ui-background-image_518658.jpg");
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        line-height: 1.2;
+        padding: 10vw 2em;
+        text-align: center;
+        width: 100%;
+      }
+      footer {
+        background-image: url("https://media.istockphoto.com/id/1419766496/es/foto/conceptos-abstractos-de-tecnolog%C3%ADa-de-ciberseguridad-y-protecci%C3%B3n-de-datos-digitales-proteja.jpg?s=612x612&w=0&k=20&c=5vCzRZ4xY7X_GcnuznSIbY4Nvt0hbou0mOiELVdk9Sc=");
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        line-height: 1.2;
+        padding: 1vw 2em;
+        text-align: center;
+        width: 100%;
+        background-size: 100% 100%; /* Ajusta los porcentajes según tus necesidades */
+      }
+      table {
+        margin: 0 auto;
+        color: #46e5f4;
+        max-width: 50em; /*tamaño en relacion con la M mayuscula*/
+      }
+      .container {
+        margin: 0 auto;
+        max-width: 50em; /*tamaño en relacion con la M mayuscula*/
+      }
+      footer {
+        background-color: chartreuse;
+      }
+      body {
+        font-family: "Helvetica", "Arial", sans-serif; /*va agarrando los tipos de letras de izq a derecha*/
+        line-height: 1.5;
+        color: #555;
+        background-color: #c2eeff;
+      }
+      a {
+        color: #e81c4f;
+      }
+      a:hover {
+        color: black;
+      }
+
+      .advertencia {
+        background-image: url("https://img.freepik.com/vector-premium/fondo-seguridad-alerta_97886-3460.jpg");
+        background-size: 10% 80%; /* Ajusta los porcentajes según tus necesidades */
+        background-position: center;
+        text-align: center;
+        margin: 0 auto;
+      }
+      strong {
+        font-size: large;
+        color: rgb(84, 2, 2);
+      }
+      h1,
+      h2 {
+        color: darkblue;
+      }
+      h3 {
+        color: blue;
+      }
+      h5 {
+        color: dodgerblue;
+      }
+      .biblio {
+        background-color: #cecece;
+        border-radius: 0.5em;
+      }
+
+
+    </style>
   </head>
   <body>
    
@@ -563,3 +644,225 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
+`;
+const sebas = `
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Oso</title>
+</head>
+<body>
+    
+    <header>
+        <h1 class="card-panel center teal lighten-2">Hola me llamo Sebastian Osorio Arteaga <br> A01706119</h1>
+        <nav>
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">Logo</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#lab1">lab 1</a></li>
+                <li><a href="#lab3">lab 3</a></li>
+                <li><a href="#lab5">lab 5</a></li>
+                <li><a href="#bibliografia">Bibliografia</a></li>
+              </ul>
+            </div>
+          </nav>
+        <p class="center">les voy a contar 15 cosas sobre mi y responder algunas preguntas</p>
+    </header>
+    
+    <div class="container">
+        <ul class="collapsible">
+            <li>
+                <div class="collapsible-header"><h2>15 cosas sobre mi</h2></div>
+            <div class="collapsible-body">
+                <ul>
+                    <li class="collection-item">Me gusta el volleyball</li>
+                    <li class="collection-item">Me gustan los videojeugos</li>
+                    <li class="collection-item">Mi videojuego favorito es Metal Gear Solid 5</li>
+                    <li class="collection-item">Mi pelicula favorita es Fantastic Mr.Fox</li>
+                    <li class="collection-item">Nunca me ha dado varicela</li>
+                    <li class="collection-item">No me gusta el sushi</li>
+                    <li class="collection-item">Mi comida favorita es el pan frances</li>
+                    <li class="collection-item">La unica mascota que he tenido ha sido una tortuga</li>
+                    <li class="collection-item">No me he roto un hueso</li>
+                    <li class="collection-item">Mi artista favorito es Frank Ocean</li>
+                    <li class="collection-item">Me gusta leer, especialmente ciencia ficcion</li>
+                    <li class="collection-item">Di clases de volleyball(como servicio social)</li>
+                    <li class="collection-item">Me gusta hacer ejercicio</li>
+                    <li class="collection-item">Soy una persona muy puntual y organizada</li>
+                    <li class="collection-item">Soy una persona que disfruta de la calma y la tranquilidad.</li>
+                </ul>
+            </div>
+
+            </li>
+            
+            
+        </ul>
+
+        <h2 id="lab1">Preguntas del lab 1</h2>
+        <p class="pregunta"><b>¿Cuál es la diferencia entre Internet y la World Wide Web?</b></p>
+        <p>Internet es una red de computadoras conectadas entre sí <br> y la World Wide Web hace uso del internet para mostrar un sistema conectado de paginas</p>
+
+        <p class="pregunta"><b>¿Cuáles son las partes de un URL?</b></p>
+        <p>protocolo, direccion, subcarpetas y slug</p>
+
+        <p class="pregunta"><b>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</b></p>
+        <p>son conjuntos de metodos de peticion para indicar la accion que se desea realizar para un recurso determinado <br>
+        GET, las peticiones que usan GET solo deben recuperar datos <br>
+        HEAD, hace lo mismo que el GET pero sin el cuerpo de la respuesta <br>
+        POST, se utiliza para enviar una entidad a un recurso específico <br>
+        PUT, reemplaza todas las representaciones actuales del recurso de destino con la carga útil de la petición <br>
+        PATCH, es utilizado para aplicar modificaciones parciales a un recurso <br>
+        DELETE, borra un recurso en especifico <br>
+        </p>
+
+        <p class="pregunta"><b>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?</b></p>
+        <p>Se debe usar un método POST</p>
+
+        <p class="pregunta"><b>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</b></p>
+        <p>Utiliza el método GET</p>
+
+        <p class="pregunta"><b>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</b></p>
+        <p>La solicitud del cliente fue exitosa</p>
+
+        <p class="pregunta"><b>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</b></p>
+        <p>si y no, ya que puede ser que ese sitio solo pueda ser accesado por un rol único</p>
+
+        <p class="pregunta"><b>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</b></p>
+        <p>Sí, ya que el error 500 indica un problema con el servidor</p>
+
+        <p class="pregunta"><b>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</b></p>
+        <p>Un elemento es deprecated, cuando su uso no es recomendable porque esos elementos podrían eliminarse en un futuro <br>
+        <font> <basefont> son algunos elementos de HTML4 que en HTML5 están desaprobados
+        </p>
+
+        <p class="pregunta"><b>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</b></p>
+        <p>HTML5 es la version más reciente de HTML y tiene mejoras en semantica y también soporta elementos multimedia </p>
+
+        <p class="pregunta"><b>¿Qué componentes de estructura y estilo tiene una tabla?</b></p>
+        <p> tr: Etiqueta que define las filas <br>
+            td: Etiqueta que define las celdas de datos <br>
+            th: Etiqueta que define las celdas de encabezados <br>
+        <p>
+
+            <p class="sincontestar"><b>¿Cuáles son los principales controles de una forma HTML5?</b></p>
+            <p></p>
+
+            <p class="pregunta"><b>¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar la siguiente página para descubrirlo: http://html5test.com/ (Al responder la pregunta recuerda poner el navegador que utilizas)</b></p>
+            <p>Chrome supongo que tiene un buen soporte, ya que en clase vimos que varios elementos estan soportados desde versiones muy viejas y la pagina de html5test ya no sirve</p>
+
+            <p class="pregunta"><b>Sobre el ciclo de vida y desarrollo de los sistemas de información: <br>
+                ¿Cuál es el ciclo de vida de los sistemas de información? <br>
+                ¿Cuál es el ciclo de desarrollo de sistemas de información? <br>
+                </b></p>
+            <ul>
+                <li>Planificación</li>
+                <li>Análisis</li>
+                <li>Diseño</li>
+                <li>Implementación</li>
+                <li>Pruebas</li>
+                <li>Instalación/Despliegue</li>
+                <li>Uso y mantenimiento</li>
+            </ul>
+
+            <h2 id="lab3">Preguntas del lab3</h2>
+
+            <p class="pregunta"><b>Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS?</b></p>
+            <p>Creo que lo mejor sería evitarlo su uso lo más que se pueda, aunque son muy pocos los casos en los que se va a tener que usar !important para resolver el conflicto del estilo</p>
+
+            <p class="pregunta"><b>Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</b></p>
+            <p>Se debe de escoger con cuidado por el tamaño "fisico", se debe de ver bien en diferentes tamaños de navegador y la imagen es muy pesada puede llegar a ralentizar el rendimiento del sitio web.</p>
+
+            <p class="pregunta"><b>Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?</b></p>
+            <p>Puedes priorizar el % si es que estas haciendo un sitio responsivo ya que se puede modificar en distintos casos y se va a ver parecido en varios casos y en cuanto a px y pt la recomendación sería usarlos si quieres algo preciso como en el tamaño del texto, la unidad del padding etc </p>
+
+            <p class="pregunta"><b>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</b></p>
+            <p>Porque reduce el tamaño del archivo, por lo que consume menos recursos entonces el tiempo de procesamiento es más rápido, asi dandole una mejor experiencia al usuario</p>
+
+            <h2 id="lab5">Preguntas lab 5</h2>
+            <p><strong>Describe Material design</strong></p>
+            <p>Es un sistema creado por google que ayuda a crear experiencias digitales de alta calidad atraves del diseño, basandose en la palabra material, refiriendose a la definición de la palabra en sí, como también en sus texturas, luces y sombras. Llegando a reimaginar el tradicional tinta y papel</p>
+
+            <div id="bibliografia">
+                <h2 id="titlebiblio">Bibliografia</h2>
+                <ul>
+                    <li>Métodos de petición HTTP - HTTP | MDN. (2023, 24 julio). MDN Web Docs. <a href="https://developer.mozilla.org/es/docs/Web/HTTP/Methods">https://developer.mozilla.org/es/docs/Web/HTTP/Methods</a></li>
+                    <li>500 Internal Server Error - HTTP | MDN. (2023, 16 febrero). MDN Web Docs. <a href="https://developer.mozilla.org/es/docs/Web/HTTP/Status/500">https://developer.mozilla.org/es/docs/Web/HTTP/Status/500</a></li>
+                    <li>GeeksforGeeks. (2023, 4 agosto). HTML deprecated tags. GeeksforGeeks. <a href="https://www.geeksforgeeks.org/html-deprecated-tags/">https://www.geeksforgeeks.org/html-deprecated-tags/</a></li>
+                    <li>HTML5 vs. HTML4: ¿Cuál es la diferencia? (s.f.). desarrolladoraweb.com. <a href="https://desarrolladoraweb.com/blog/html5-vs-html4-cual-es-la-diferencia">https://desarrolladoraweb.com/blog/html5-vs-html4-cual-es-la-diferencia</a></li>
+                    <li>Conceptos básicos de las tablas HTML - Aprende desarrollo web | MDN. (s.f.). MDN Web Docs. <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics">https://developer.mozilla.org/es/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics</a></li>
+                    <li>Guerrero, A. C. (2015, 20 julio). Ciclo de vida de un sistema de información • gestiopolis. Gestiopolis. <a href="https://www.gestiopolis.com/ciclo-de-vida-de-un-sistema-de-informacion/">https://www.gestiopolis.com/ciclo-de-vida-de-un-sistema-de-informacion/</a></li>
+                    <li>Material Design - Version 2. (s. f.). Material Design. <a href="https://m2.material.io/design/introduction#principles">https://m2.material.io/design/introduction#principles</a></li>
+                    
+                </ul>
+            </div>
+            
+            
+            
+
+
+        <footer class="page-footer">se uso el IDE VisualStudioCode <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></footer>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>
+
+`;
+
+const importante = `
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Importante</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background-image: url(https://i.pinimg.com/originals/e2/e7/b0/e2e7b0f7ad7ea7b06d58a322b5d8711a.gif);
+      }
+
+      #seccion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+      #Boton {
+        background-color: #000000;
+        padding: 30px;
+        color: aliceblue;
+        font-size: x-large;
+        border: 5px solid #39ff14;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="seccion">
+      <p id="Caliz"></p>
+      <button
+        id="Boton"
+        type="button"
+        onclick="window.open('https://www.tiktok.com/@scrigio10/video/7301747872503041313?q=Josh%20Hutcherson%20whistle&t=1728618480719', '_blank')"
+      >
+        ¡IMPORTANTE!
+      </button>
+    </div>
+  </body>
+</html>`;
+
+router.get("/A01712114", (request, response, next) => {
+  response.send(omar);
+});
+
+router.get("/A01706119", (request, response, next) => {
+  response.send(sebas);
+});
+router.get("/importante", (request, response, next) => {
+  response.send(importante);
+});
+module.exports = router;

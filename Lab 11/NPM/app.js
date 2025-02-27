@@ -1,9 +1,6 @@
 const express = require("express");
 const app = express();
 
-const path = require("path");
-app.use(express.static(path.join(__dirname, "public")));
-
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -21,14 +18,11 @@ app.use("/chewy", (request, response, next) => {
 });
 
 const rutasPersonajes = require("./routes/personajes.routes");
-
+const matriculas = require("./routes/matriculas");
 app.use("/personajes", rutasPersonajes);
 
-app.use((request, response, next) => {
-  console.log("Otro middleware!");
+app.use(matriculas);
 
-  //Manda la respuesta
-  response.send("¡Hola mundo!");
-});
+app.use(rutasPersonajes);
 
 app.listen(3000);
