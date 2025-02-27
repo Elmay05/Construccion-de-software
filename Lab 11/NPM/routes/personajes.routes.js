@@ -219,12 +219,6 @@ const personajes = [];
 router.get("/agregar", (request, response, next) => {
   response.send(html_header + html_content_form + html_footer);
 });
-router.use((request, response, next) => {
-  response.status(404);
-  response.send(html_header_error + "La pagina no existe" + html_footer);
-});
-//Cuando se registra un middleware con app.post(),
-//el middleware sólo se registra para el método HTTP POST
 router.post("/agregar", (request, response, next) => {
   console.log(request.body);
   personajes.push(request.body.nombre);
@@ -235,6 +229,13 @@ router.post("/agregar", (request, response, next) => {
     html += personaje;
     html += html_card_footer;
   }
+router.use((request, response, next) => {
+  response.status(404);
+  response.send(html_header_error + "La pagina no existe" + html_footer);
+});
+//Cuando se registra un middleware con app.post(),
+//el middleware sólo se registra para el método HTTP POST
+
   html += html_footer;
   response.send(html);
 });
