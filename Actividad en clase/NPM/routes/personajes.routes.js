@@ -7,6 +7,8 @@ const personajes = [];
 //Cuando se registra un middleware con app.get(),
 //el middleware sólo se registra para el método HTTP GET
 router.get("/agregar", personajes_controller.get_agregar);
+//ventaja de los controllers es que puedo hacer cosas como rutas en ingles
+router.get("/add", personajes_controller.get_agregar);
 
 //Cuando se registra un middleware con app.post(),
 //el middleware sólo se registra para el método HTTP POST
