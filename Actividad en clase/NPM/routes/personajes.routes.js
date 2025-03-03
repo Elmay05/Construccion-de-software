@@ -2,7 +2,9 @@ const express = require("express");
 
 const router = express.Router();
 const personajes_controller = require("../controllers/personajes.controller");
-
+/*
+ * De lo especifico a lo general
+ */
 
 //Cuando se registra un middleware con app.get(),
 //el middleware sólo se registra para el método HTTP GET
@@ -17,5 +19,7 @@ router.post("/agregar", personajes_controller.post_agregar);
 
 
 router.get("/mostrar", personajes_controller.get_mostrar);
+
+router.get("/", personajes_controller.get_lista);
 
 module.exports = router;

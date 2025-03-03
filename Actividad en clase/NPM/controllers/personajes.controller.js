@@ -11,10 +11,14 @@ exports.post_agregar = (request, response, next) => {
   const personaje = new Personaje(request.body.nombre);
   personaje.save();
   console.log(Personaje.fetchAll());
-  response.render("lista_personajes", {
-    personajes: Personaje.fetchAll(),
-  });
+  response.redirect("/personajes")
+  //
 };
+exports.get_lista = (request,response, next)=>{
+    response.render("lista_personajes", {
+        personajes: Personaje.fetchAll(),
+    });
+}
 
 exports.get_mostrar = (request, response, next) => {
     const path = require("path");
