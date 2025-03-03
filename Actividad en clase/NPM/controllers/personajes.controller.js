@@ -1,13 +1,22 @@
+const Personaje = require("../models/personaje.model");
+
 //Es bueno nombrarlos con el metodo y la ruta para saber de que es 
+
 exports.get_agregar = (request, response, next) => {
     response.render("agregar_personaje");
 };
 
 exports.post_agregar = (request, response, next) => {
   console.log(request.body);
-  personajes.push(request.body.nombre);
-  console.log(personajes);
+  const personaje = new Personaje(request.body.nombre);
+  personaje.save();
+  console.log(Personaje.fetchAll());
   response.render("lista_personajes", {
-    personajes: personajes,
+    personajes: Personaje.fetchAll(),
   });
 };
+
+exports.get_mostrar = (request, response, next) => {
+    const path = require("path");
+    response.sendFile(path.join(__dirname, "..", "views", "index.html"));
+  };
