@@ -1,0 +1,21 @@
+
+html,      
+body {      
+    height: 100%;
+        margin: 0;
+    background-image: url(https://i.pinimg.com/originals/e2/e7/b0/e2e7b0f7ad7ea7b06d58a322b5d8711a.gif);
+}        
+
+#seccion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#Boton {
+    background-color: #000000;
+    padding: 30px;
+    color: aliceblue;
+    font-size: x-large;
+    border: 5px solid #39ff14;
+}
