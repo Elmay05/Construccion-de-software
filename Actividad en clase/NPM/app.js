@@ -22,8 +22,6 @@ const rutasUsuarios = require('./routes/users.routes');
 app.use('/users', rutasUsuarios);
 
 const rutasPersonajes = require('./routes/personajes.routes');
-const cookieParser = require('cookie-parser');
-app.use(cookieParser());
 app.use('/personajes', rutasPersonajes);
 
 app.use((request, response, next) => {
@@ -34,3 +32,4 @@ app.use((request, response, next) => {
 });
 
 app.listen(3000);
+                    
