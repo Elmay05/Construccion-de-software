@@ -23,8 +23,9 @@ app.use('/users', rutasUsuarios);
 
 const rutasPersonajes = require('./routes/personajes.routes');
 const cookieParser = require('cookie-parser');
-app.use('/personajes', rutasPersonajes);
 app.use(cookieParser());
+app.use('/personajes', rutasPersonajes);
+
 app.use((request, response, next) => {
     console.log('Otro middleware!');
     

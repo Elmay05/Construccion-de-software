@@ -13,14 +13,14 @@ exports.post_agregar = (request, response, next) => {
     const personaje = new Personaje(request.body.nombre);
     personaje.save();
     //cookies
-    response.cookie('Set-Cookie', `Ultimo_personaje=${personaje.nombre}`);
+
 
     console.log(Personaje.fetchAll());
     response.redirect('/personajes');
 };
 
 exports.get_lista = (request, response, next) => { 
-    request.get('Cookie').split(';')[1].trim().split('=')[1];
+   
     response.render('lista_personajes', {
         personajes: Personaje.fetchAll(),
         isLoggedIn: request.session.isLoggedIn || false,
