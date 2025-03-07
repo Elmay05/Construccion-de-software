@@ -1,0 +1,15 @@
+Partials es convencion donde se guardaraon cosas que se usarán mas adelante <=
+es para qeu las cosas se escriban como es > ej: entrada
+<script>
+  console.alert("jaja, te hackee");
+</script>
+salida: alerta con el texto <- esto meustra codigo, por eso se pone en html> ej:
+entrada
+<script>
+  console.alert("jaja, te hackee");
+</script>
+salida: "
+<script>
+  console.alert("jaja, te hackee");
+</script>
+"
