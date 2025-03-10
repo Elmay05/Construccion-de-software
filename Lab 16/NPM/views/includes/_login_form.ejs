@@ -1,16 +1,20 @@
 <div class="columns">
   <div class="column">
-    <form action="/users/login" method="POST">
-      <label for="username" class="label">Usuario</label>
+    <form action="/users/signup" method="POST">
+      <!-- Campo oculto para el token CSRF -->
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      
+      <label for="username" class="label">Correo Electrónico</label>
       <input
         class="input is-primary"
-        type="text"
+        type="email"
         placeholder="cheewbaca"
         id="username"
         name="username"
         required
       />
       <br><br>
+
       <label for="password" class="label">Password</label>
       <input
         class="input is-primary"
@@ -20,6 +24,7 @@
         required
       />
       <br><br>
+
       <input type="submit" id="boton_login" class="button is-primary" value="Entrar">
     </form>
   </div>
