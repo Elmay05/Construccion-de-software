@@ -42,7 +42,7 @@ exports.post_login = (request, response, next) => {
                         request.session.username = rows[0].username;
                         request.session.isLoggedIn = true;
                         return request.session.save(err => {
-                            response.redirect('/mostrar');
+                            response.redirect('/entregan/mostrar');
                         });
                     } else {
                         response.redirect('/users/login');

@@ -17,9 +17,9 @@ app.use(session({
 }));
 
 app.use(bodyParser.urlencoded({ extended: false }));
-
-// 💡 Middleware CSRF debe ir después de sesiones y bodyParser
 app.use(csurf());
+// 💡 Middleware CSRF debe ir después de sesiones y bodyParser
+
 
 // 💡 Middleware para pasar csrfToken a todas las vistas
 app.use((req, res, next) => {
