@@ -13,7 +13,6 @@
       <!--Definir formulario para login-->
       <!--Se pone ID para mandarlos al JS-->
       <form action="/users/login" method="POST">
-        <p>Token CSRF: <%= csrfToken %></p>
         <input type="text" name="username" placeholder="Usuario">
         <input type="password" name="password" placeholder="Contraseña">
         <input type="hidden" name="_csrf" value="<%= csrfToken %>">

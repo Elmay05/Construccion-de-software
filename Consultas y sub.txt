@@ -1,0 +1,100 @@
+1.- Actrices de “Las brujas de Salem”.
+SELECT A.Nombre
+FROM Actor A, Elenco E
+WHERE A.Nombre = E.Nombre
+AND A.sexo = 'F' 
+AND E.Titulo = 'Las Brujas de Salem';
+
+SELECTT Nombre
+FROM Actor
+WHERE Sexo='F'
+AND Nombre in (SELECT Nombre
+               FROM Elenco
+               WHERE Titulo='Las Brujas de Salem');
+
+-------------------------------------------------------------------------------------
+2.- Nombres de los actores que aparecen en películas producidas por MGM en 1995.
+SELECT E.Nombre
+FROM Elenco E, Pelicula P
+WHERE E.titulo = P.titulo
+AND nomestudio='MGM' AND año=1995
+AND E.año=P.año;
+
+
+
+SELECT Nombre
+FROM Elenco
+WHERE Titulo IN (SELECT Titulo
+                FROM Pelicula
+                WHERE nomestudio='MGM' AND año=1995);
+
+-------------------------------------------------------------------------------------
+3.- Películas que duran más que “Lo que el viento se llevó” (de 1939).
+
+SELECT titulo
+FROM Pelicula
+WHERE duracion>(SELECT duración
+		FROM Pelicula
+		WHERE titulo='Lo que el viento se llevó'
+		AND año=1939);
+
+-------------------------------------------------------------------------------------
+4.- Productores que han hecho más películas que George Lucas.
+
+
+SELECT Pr.nombre, COUNT(Pe.titulo)
+FROM Productor Pr, Pelicula Pe
+WHERE Pr.idproductor = Pe.idproductor
+GROUP BY P.nombre
+HAVING COUNT() >  (
+		  SELECT Pr.nombre COUNT() 
+		  FROM Productor Pr, Pelicula Pe
+		  WHERE Pr.idproductor = Pe.idproductor 
+		  AND P.nombre = 'George Lucas'
+		  )
+ORDER BY COUNT(Pe.titulo) DESC;
+
+-------------------------------------------------------------------------------------
+5.- Nombres de los productores de las películas en las que ha aparecido Sharon Stone.
+
+SELECT Pr.Nombre
+FROM Productores PR, Pelicula P
+WHERE Pr.idproductor =P.idproductor 
+AND P.titulo IN (SELECT Titulo
+		      FROM Elenco 
+		      WHERE E.nombre='Sharon Stone')
+GROUP BY Pr.Nombre;
+
+
+
+
+SELECT Nombre
+FROM Productores Pr, Pelicula P, Elenco E
+WHERE Pr.idproductor=P.idproductor
+AND P.titulo=E.titulo
+AND P.año=E.año
+AND E.nombre='Sharon Stone'
+GROUP BY Pr.Nombre;
+-------------------------------------------------------------------------------------
+Película(título, año, duración, encolor, presupuesto, nomestudio, idproductor)
+Elenco(título, año, nombre, sueldo)
+Actor(nombre, dirección, telefono, fechanacimiento, sexo)
+Productor(idproductor, nombre, dirección, teléfono)
+Estudio(nomestudio, dirección);
+
+6.- Título de las películas que han sido filmadas más de una vez
+SELECT Titulo, COUNT(*) AS 'Numero de peliculas'
+FROM Pelicula
+GROUP BY Titulo
+HAVING COUNT(*)>1
+ORDER BY DESC;
+
+
+
+
+
+
+
+
+
+
