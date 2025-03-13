@@ -5,7 +5,7 @@ body {
     background-color: #494d92;
     /*Hace que sea flexible su conetnido (que su comportamiento se adapte al tamaño de contenido*/
     display: flex;
-    /*Centra orizontamente el contenido*/
+    /*Centra horizontamente el contenido*/
     justify-content: center;
     /*Centra verticalmente el contenido*/
     align-items: center;
