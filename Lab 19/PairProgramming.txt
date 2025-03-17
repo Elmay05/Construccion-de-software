@@ -1,0 +1,5 @@
+Pair Programming con Sebastian Osorio
+
+https://github.com/SebastianOso/labs_construcciondesoftware/commit/7a4977704bfd6ae1afb45308002c0a223d07895d
+https://github.com/SebastianOso/labs_construcciondesoftware/commit/a95c390aec70ab599f5aa7ec9c2853f26ed8a618
+https://github.com/SebastianOso/labs_construcciondesoftware/commit/f1e7108918c09a18302e4a38af39954c4249f9e8
