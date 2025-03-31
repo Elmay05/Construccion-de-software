@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="/css/pokemon.css">
+</head>
+<body>
+    <h1>Pokédex</h1>
+    <form action="/pokemon" method="get">
+        <input type="text" name="name" placeholder="Ingrese un Pokémon" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    <div id="pokemonInfo">
+        <% if (error) { %>
+            <p><strong><%= error %></strong></p>
+        <% } else if (pokemon) { %>
+            <h2><%= pokemon.name %> (#<%= pokemon.id %>)</h2>
+            <img src="<%= pokemon.sprite %>" alt="<%= pokemon.name %>">
+            <p><strong>Altura:</strong> <%= pokemon.height %> dm</p>
+            <p><strong>Peso:</strong> <%= pokemon.weight %> hg</p>
+            <p><strong>Tipos:</strong> <%= pokemon.types.join(", ") %></p>
+        <% } %>
+    </div>
+</body>
+</html>
