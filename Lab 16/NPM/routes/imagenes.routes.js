@@ -20,4 +20,7 @@ router.get('/mostrar', isAuth, imagenes_controller.get_mostrar);
 router.get('/:id', isAuth, imagenes_controller.get_lista);
 router.get('/', isAuth, imagenes_controller.get_lista);
 
+router.get('/buscar/:valor', isAuth, imagenes_controller.get_buscar);
+router.get('/buscar', isAuth, imagenes_controller.get_buscar);
+
 module.exports = router;

@@ -17,6 +17,8 @@ app.use(session({
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
 
 const multer = require('multer');
 
@@ -38,6 +40,7 @@ const fileStorage = multer.diskStorage({
 //pero hay diferentes opciones si se quieren subir varios archivos. 
 //'archivo' es el nombre del input tipo file de la forma
 app.use(multer({ storage: fileStorage }).single('archivo')); 
+app.use(bodyParser.json());
 
 const csrf = require('csurf');
 const csrfProtection = csrf();
